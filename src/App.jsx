@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Education from './pages/Education';
@@ -8,7 +8,7 @@ import Tools from './pages/Tools';
 
 function App() {
   return (
-    <Router basename="/fondoactivo">
+    <Router>
       <div className="app-container">
         <Navbar />
         <main style={{ minHeight: '80vh', padding: '20px 0' }}>
