@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { TrendingUp, BookOpen, Calculator, Home } from 'lucide-react';
 import styles from './Navbar.module.css';
 
+import logo from '../assets/logo.png';
+
 const Navbar = () => {
     const location = useLocation();
 
@@ -12,7 +14,7 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={`container ${styles.navContainer}`}>
                 <div className={styles.logo}>
-                    <img src="/src/assets/logo-full.png" alt="Fondo Activo" style={{ height: '40px' }} />
+                    <img src={logo} alt="Fondo Activo" style={{ height: '40px' }} />
                 </div>
                 <div className={styles.links}>
                     <Link to="/" className={`${styles.link} ${isActive('/') ? styles.active : ''}`}>
