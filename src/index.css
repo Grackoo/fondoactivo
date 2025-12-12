@@ -1,0 +1,98 @@
+:root {
+  --color-primary: #051923;
+  /* Match logo dark teal/black */
+  --color-secondary: #00D4C5;
+  /* Bright Teal from logo accent if any, or keep Gold if preferred. Actually logo is fast white/teal. I'll use a Teal */
+  --color-accent: #00B4D8;
+  --color-text-main: #1F2937;
+  --color-text-light: #F9FAFB;
+  --color-bg-light: #F3F4F6;
+  --color-bg-white: #FFFFFF;
+  --color-danger: #EF4444;
+  --color-success: #10B981;
+
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-3d: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-light);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card-3d {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-3d:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-3d);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
