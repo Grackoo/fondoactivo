@@ -8,7 +8,7 @@ import Tools from './pages/Tools';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/fondoactivo">
       <div className="app-container">
         <Navbar />
         <main style={{ minHeight: '80vh', padding: '20px 0' }}>

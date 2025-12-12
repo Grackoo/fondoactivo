@@ -2,6 +2,7 @@
   "name": "thermal-aldrin",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://grackoo.github.io/fondoactivo",
   "type": "module",
   "scripts": {
     "dev": "vite",
